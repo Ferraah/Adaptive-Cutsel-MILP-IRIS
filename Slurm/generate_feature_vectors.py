@@ -308,7 +308,10 @@ if __name__ == "__main__":
         for random_seed in random_seeds:
             mps_file = get_filename(args.transformed_problem_dir, instance_name, random_seed, trans=True, root=False,
                                     sample_i=None, ext='mps')
-            assert os.path.isfile(mps_file), 'File {} does not exist'.format(mps_file)
+            #assert os.path.isfile(mps_file), 'File {} does not exist'.format(mps_file)
+            if not os.path.isfile(mps_file):
+                print('File {} does not exist'.format(mps_file), flush=True)
+                continue
             instance_paths.append(mps_file)
 
     instance_seed_aggregate_features = {instance: {random_seed: None for random_seed in random_seeds}

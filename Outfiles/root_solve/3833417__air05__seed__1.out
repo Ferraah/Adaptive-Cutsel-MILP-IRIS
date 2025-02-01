@@ -1,0 +1,46 @@
+DIR: 0.0, EFF: 0.8333333333333333, INT: 0.08333333333333333, OBJ: 0.08333333333333333
+original problem has 7182 variables (7182 bin, 0 int, 0 impl, 0 cont) and 343 constraints
+unknown variable <t_x67> in line 2 of solution file </mnt/lscratch/users/dferrario/Adaptive-Cutsel-MILP/TransformedSolutions/air05__trans__seed__1.sol>
+  (further unknown variables are ignored)
+1/1 feasible solution given by solution candidate storage, new primal bound 2.637400e+04
+
+presolving:
+   (0.1s) running MILP presolver
+   (0.1s) MILP presolver (2 rounds): 0 aggregations, 15 fixings, 0 bound changes
+   (0.3s) probing: 128/6172 (2.1%) - 0 fixings, 1 aggregations, 335 implications, 0 bound changes
+   (0.3s) probing aborted: 50/50 successive totally useless probings
+presolving (1 rounds: 1 fast, 1 medium, 1 exhaustive):
+ 1011 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 676 cliques
+presolved problem has 6171 variables (6171 bin, 0 int, 0 impl, 0 cont) and 343 constraints
+    343 constraints of type <setppc>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.33
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  1.8s|     1 |     0 |  7381 |     - |    84M |   0 |6171 | 343 | 343 |   0 |  0 |   0 |   0 | 2.587761e+04 | 2.637400e+04 |   1.92%| unknown
+Computing relative interior point (time limit: 18.2252, iter limit: 73810) ...
+  5.4s|     1 |     0 |  7646 |     - |   258M |   0 |6172 | 343 | 353 |  10 |  1 |   0 |   0 | 2.587761e+04 | 2.637400e+04 |   1.92%| unknown
+  5.4s|     1 |     0 |  7646 |     - |   258M |   0 |6172 | 343 | 353 |  10 |  1 |   0 |   0 | 2.592995e+04 | 2.637400e+04 |   1.71%| unknown
+  5.8s|     1 |     0 |  8258 |     - |   258M |   0 |6172 | 343 | 363 |  20 |  2 |   0 |   0 | 2.595896e+04 | 2.637400e+04 |   1.60%| unknown
+  6.0s|     1 |     0 |  8726 |     - |   258M |   0 |6172 | 343 | 373 |  30 |  3 |   0 |   0 | 2.597209e+04 | 2.637400e+04 |   1.55%| unknown
+  6.2s|     1 |     0 |  9055 |     - |   258M |   0 |6172 | 343 | 381 |  38 |  4 |   0 |   0 | 2.598843e+04 | 2.637400e+04 |   1.48%| unknown
+  6.4s|     1 |     0 |  9373 |     - |   258M |   0 |6172 | 343 | 387 |  44 |  5 |   0 |   0 | 2.599885e+04 | 2.637400e+04 |   1.44%| unknown
+  6.5s|     1 |     0 |  9535 |     - |   258M |   0 |6172 | 343 | 390 |  49 |  6 |   0 |   0 | 2.599939e+04 | 2.637400e+04 |   1.44%| unknown
+  6.6s|     1 |     0 |  9557 |     - |   259M |   0 |6172 | 343 | 393 |  52 |  7 |   0 |   0 | 2.600037e+04 | 2.637400e+04 |   1.44%| unknown
+  6.7s|     1 |     0 |  9561 |     - |   259M |   0 |6172 | 343 | 395 |  54 |  8 |   0 |   0 | 2.600041e+04 | 2.637400e+04 |   1.44%| unknown
+  6.8s|     1 |     0 |  9619 |     - |   259M |   0 |6172 | 343 | 397 |  56 |  9 |   0 |   0 | 2.600236e+04 | 2.637400e+04 |   1.43%| unknown
+  6.9s|     1 |     0 |  9661 |     - |   259M |   0 |6172 | 343 | 398 |  57 | 10 |   0 |   0 | 2.600568e+04 | 2.637400e+04 |   1.42%| unknown
+  7.0s|     1 |     0 |  9696 |     - |   259M |   0 |6172 | 343 | 390 |  58 | 11 |   0 |   0 | 2.600600e+04 | 2.637400e+04 |   1.42%| unknown
+  7.1s|     1 |     0 |  9772 |     - |   259M |   0 |6172 | 343 | 391 |  59 | 12 |   0 |   0 | 2.600600e+04 | 2.637400e+04 |   1.42%| unknown
+  7.2s|     1 |     0 |  9772 |     - |   259M |   0 |6172 | 343 | 391 |  59 | 13 |   0 |   0 | 2.600600e+04 | 2.637400e+04 |   1.42%| unknown
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  7.3s|     1 |     2 |  9772 |     - |   259M |   0 |6172 | 343 | 391 |  59 | 14 |   0 |   0 | 2.600600e+04 | 2.637400e+04 |   1.42%| unknown
+
+SCIP Status        : solving was interrupted [node limit reached]
+Solving Time (sec) : 7.27
+Solving Nodes      : 1
+Primal Bound       : +2.63740000000000e+04 (1 solutions)
+Dual Bound         : +2.60060000000000e+04
+Gap                : 1.42 %

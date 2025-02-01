@@ -1,0 +1,33 @@
+DIR: 0.0, EFF: 0.8333333333333333, INT: 0.08333333333333333, OBJ: 0.08333333333333333
+original problem has 2025 variables (1800 bin, 0 int, 0 impl, 225 cont) and 210 constraints
+1/1 feasible solution given by solution candidate storage, new primal bound 9.240000e+02
+
+presolving:
+   (0.0s) running MILP presolver
+   (0.0s) MILP presolver found nothing
+   (0.0s) probing: 51/1600 (3.2%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.0s) probing aborted: 50/50 successive totally useless probings
+presolving (1 rounds: 1 fast, 1 medium, 1 exhaustive):
+ 425 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 170 cliques
+presolved problem has 1600 variables (1600 bin, 0 int, 0 impl, 0 cont) and 210 constraints
+     40 constraints of type <knapsack>
+    170 constraints of type <setppc>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.04
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  0.7s|     1 |     0 | 10348 |     - |    22M |   0 |1600 | 210 | 210 |   0 |  0 |   0 |   0 | 9.170000e+02 | 9.240000e+02 |   0.76%| unknown
+Computing relative interior point (time limit: 19.3225, iter limit: 103480) ...
+  1.8s|     1 |     0 | 10399 |     - |    35M |   0 |1600 | 210 | 220 |  10 |  1 |   0 |   0 | 9.210000e+02 | 9.240000e+02 |   0.33%| unknown
+  1.8s|     1 |     0 | 10451 |     - |    35M |   0 |1600 | 210 | 230 |  20 |  2 |   0 |   0 | 9.210000e+02 | 9.240000e+02 |   0.33%| unknown
+  1.8s|     1 |     0 | 10452 |     - |    35M |   0 |1600 | 210 | 240 |  30 |  3 |   0 |   0 | 9.240000e+02 | 9.240000e+02 |   0.00%| unknown
+  1.8s|     1 |     0 | 10452 |     - |    35M |   0 |1600 | 210 | 240 |  30 |  3 |   0 |   0 | 9.240000e+02 | 9.240000e+02 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 1.81
+Solving Nodes      : 1
+Primal Bound       : +9.24000000000000e+02 (1 solutions)
+Dual Bound         : +9.24000000000000e+02
+Gap                : 0.00 %

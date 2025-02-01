@@ -1,0 +1,43 @@
+original problem has 28926 variables (28926 bin, 0 int, 0 impl, 0 cont) and 23294 constraints
+1/1 feasible solution given by solution candidate storage, new primal bound 0.000000e+00
+
+presolving:
+(round 1, fast)       2939 del vars, 4838 del conss, 0 add conss, 2772 chg bounds, 20 chg sides, 16 chg coeffs, 0 upgd conss, 0 impls, 6273 clqs
+(round 2, fast)       3065 del vars, 5286 del conss, 0 add conss, 2783 chg bounds, 25 chg sides, 16 chg coeffs, 0 upgd conss, 0 impls, 7721 clqs
+   (0.3s) running MILP presolver
+   (0.4s) MILP presolver (4 rounds): 170 aggregations, 0 fixings, 0 bound changes
+(round 3, medium)     3248 del vars, 5286 del conss, 0 add conss, 2783 chg bounds, 25 chg sides, 16 chg coeffs, 0 upgd conss, 0 impls, 7656 clqs
+(round 4, fast)       3252 del vars, 5399 del conss, 0 add conss, 2783 chg bounds, 26 chg sides, 18 chg coeffs, 0 upgd conss, 0 impls, 8893 clqs
+(round 5, exhaustive) 3265 del vars, 5772 del conss, 0 add conss, 2783 chg bounds, 26 chg sides, 18 chg coeffs, 0 upgd conss, 0 impls, 8957 clqs
+(round 6, exhaustive) 3267 del vars, 5773 del conss, 0 add conss, 2783 chg bounds, 26 chg sides, 18 chg coeffs, 17019 upgd conss, 0 impls, 9253 clqs
+(round 7, medium)     3614 del vars, 6202 del conss, 592 add conss, 2783 chg bounds, 71 chg sides, 9914 chg coeffs, 17019 upgd conss, 0 impls, 9976 clqs
+(round 8, fast)       3614 del vars, 6223 del conss, 592 add conss, 2783 chg bounds, 77 chg sides, 9940 chg coeffs, 17019 upgd conss, 0 impls, 9976 clqs
+(round 9, exhaustive) 3614 del vars, 6295 del conss, 601 add conss, 2783 chg bounds, 77 chg sides, 9940 chg coeffs, 17019 upgd conss, 0 impls, 9976 clqs
+(round 10, exhaustive) 3679 del vars, 6360 del conss, 601 add conss, 2783 chg bounds, 77 chg sides, 10683 chg coeffs, 17019 upgd conss, 0 impls, 9976 clqs
+(round 11, exhaustive) 3831 del vars, 6360 del conss, 601 add conss, 2783 chg bounds, 82 chg sides, 11466 chg coeffs, 17019 upgd conss, 0 impls, 10126 clqs
+(round 12, fast)       3831 del vars, 6405 del conss, 601 add conss, 2783 chg bounds, 82 chg sides, 11618 chg coeffs, 17019 upgd conss, 0 impls, 10126 clqs
+   (1.5s) probing: 185/25362 (0.7%) - 163 fixings, 0 aggregations, 879 implications, 0 bound changes
+   (1.5s) probing aborted: 50/50 successive totally useless probings
+presolving (13 rounds: 13 fast, 8 medium, 6 exhaustive):
+ 3842 deleted vars, 6405 deleted constraints, 601 added constraints, 2783 tightened bounds, 0 added holes, 82 changed sides, 12325 changed coefficients
+ 0 implications, 11111 cliques
+presolved problem has 25199 variables (25199 bin, 0 int, 0 impl, 0 cont) and 17386 constraints
+   6788 constraints of type <knapsack>
+   7175 constraints of type <setppc>
+      9 constraints of type <and>
+     65 constraints of type <xor>
+    502 constraints of type <linear>
+   2847 constraints of type <logicor>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 1.38
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  1.5s|     1 |     0 |     0 |     - |   182M |   0 |  25k|  17k|   0 |   0 |  0 |   0 |   0 | 0.000000e+00 | 0.000000e+00 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 1.50
+Solving Nodes      : 1
+Primal Bound       : +0.00000000000000e+00 (1 solutions)
+Dual Bound         : +0.00000000000000e+00
+Gap                : 0.00 %

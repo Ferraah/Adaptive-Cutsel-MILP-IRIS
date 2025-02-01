@@ -76,11 +76,14 @@ def parameter_sweep(instance_dir, solution_dir, default_results_dir, temp_dir, o
                              arg_list=[os.path.join(temp_dir, signal_file)],
                              dependencies=slurm_job_ids)
 
+    print("Waiting for jobs to finish")
     # Wait on jobs to finish and extract the solve information
     data, numeric_issue = wait_for_slurm_jobs_and_extract_solve_info(temp_dir, outfile_dir, instance, rand_seeds,
                                                                      len(convex_combinations), signal_file, root=True,
-                                                                     wait_time=10)
+                                                                     wait_time=20) #10
 
+    print("Jobs finished")
+    
     if numeric_issue:
         return None, None, True, True, False, False, True, False, None
 

@@ -1,0 +1,31 @@
+DIR: 0.0, EFF: 0.8333333333333333, INT: 0.08333333333333333, OBJ: 0.08333333333333333
+original problem has 32670 variables (32597 bin, 37 int, 0 impl, 36 cont) and 32706 constraints
+unknown variable <t_total_l0_norm> in line 2 of solution file </mnt/lscratch/users/dferrario/Adaptive-Cutsel-MILP/TransformedSolutions/adult-max5features__trans__seed__1.sol>
+  (further unknown variables are ignored)
+1/1 feasible solution given by solution candidate storage, new primal bound 5.848098e+03
+
+presolving:
+   (0.4s) running MILP presolver
+   (3.3s) MILP presolver (2 rounds): 0 aggregations, 0 fixings, 0 bound changes
+   (3.5s) probing: 51/32597 (0.2%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (3.5s) probing aborted: 50/50 successive totally useless probings
+presolving (1 rounds: 1 fast, 1 medium, 1 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 32670 variables (32597 bin, 37 int, 36 impl, 0 cont) and 32706 constraints
+    144 constraints of type <varbound>
+      1 constraints of type <knapsack>
+  32561 constraints of type <linear>
+Presolving Time: 3.47
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+ 20.2s|     1 |     0 |  3637 |     - |   244M |   0 |  32k|  32k|  32k|   0 |  0 |   0 |   0 | 0.000000e+00 | 5.848098e+03 |    Inf | unknown
+(node 1) LP solver hit time limit in LP 1 -- using pseudo solution instead
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 20.20
+Solving Nodes      : 1
+Primal Bound       : +5.84809750881316e+03 (1 solutions)
+Dual Bound         : +0.00000000000000e+00
+Gap                : infinite

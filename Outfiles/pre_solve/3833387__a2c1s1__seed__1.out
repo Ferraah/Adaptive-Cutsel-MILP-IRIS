@@ -1,0 +1,37 @@
+original problem has 3648 variables (192 bin, 0 int, 0 impl, 3456 cont) and 3312 constraints
+1/1 feasible solution given by solution candidate storage, new primal bound 1.088914e+04
+
+presolving:
+(round 1, fast)       76 del vars, 72 del conss, 0 add conss, 2226 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       150 del vars, 72 del conss, 0 add conss, 3753 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       150 del vars, 72 del conss, 0 add conss, 4120 chg bounds, 74 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 4, fast)       150 del vars, 72 del conss, 0 add conss, 4148 chg bounds, 74 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (0.0s) running MILP presolver
+   (0.1s) MILP presolver (24 rounds): 29 aggregations, 0 fixings, 292 bound changes
+(round 5, medium)     179 del vars, 72 del conss, 0 add conss, 4440 chg bounds, 74 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 6, fast)       179 del vars, 101 del conss, 0 add conss, 4440 chg bounds, 74 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 7, exhaustive) 179 del vars, 101 del conss, 0 add conss, 4440 chg bounds, 74 chg sides, 0 chg coeffs, 960 upgd conss, 0 impls, 0 clqs
+   (0.1s) probing cycle finished: starting next cycle
+(round 8, exhaustive) 179 del vars, 101 del conss, 0 add conss, 4520 chg bounds, 74 chg sides, 0 chg coeffs, 960 upgd conss, 7038 impls, 31 clqs
+   (0.1s) probing: 36/192 (18.8%) - 0 fixings, 0 aggregations, 6109 implications, 80 bound changes
+   (0.1s) probing aborted: 50/50 successive totally useless probings
+presolving (9 rounds: 9 fast, 4 medium, 3 exhaustive):
+ 179 deleted vars, 101 deleted constraints, 0 added constraints, 4520 tightened bounds, 0 added holes, 74 changed sides, 0 changed coefficients
+ 7038 implications, 31 cliques
+presolved problem has 3469 variables (192 bin, 0 int, 0 impl, 3277 cont) and 3211 constraints
+    960 constraints of type <varbound>
+   2251 constraints of type <linear>
+Presolving Time: 0.14
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  0.2s|     1 |     0 |  1622 |     - |    22M |   0 |3469 |3211 |3211 |   0 |  0 |   0 |   0 | 7.302075e+02 | 1.088914e+04 |1391.24%| unknown
+  0.2s|     1 |     2 |  1622 |     - |    22M |   0 |3469 |3211 |3211 |   0 |  1 |   0 |   0 | 7.302075e+02 | 1.088914e+04 |1391.24%| unknown
+
+SCIP Status        : solving was interrupted [node limit reached]
+Solving Time (sec) : 0.22
+Solving Nodes      : 1
+Primal Bound       : +1.08891376250000e+04 (1 solutions)
+Dual Bound         : +7.30207500000000e+02
+Gap                : 1391.24 %
+wrote problem to file /mnt/lscratch/users/dferrario/Adaptive-Cutsel-MILP/TransformedInstances/a2c1s1__trans__seed__1.mps

@@ -1,0 +1,32 @@
+original problem has 200787 variables (200787 bin, 0 int, 0 impl, 0 cont) and 22117 constraints
+1/1 feasible solution given by solution candidate storage, new primal bound -2.570000e+02
+
+presolving:
+(round 1, fast)       186963 del vars, 17 del conss, 0 add conss, 17 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 20160 clqs
+(round 2, fast)       373909 del vars, 1224 del conss, 0 add conss, 17 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 20160 clqs
+   (45.0s) running MILP presolver
+   (45.3s) MILP presolver (2 rounds): 0 aggregations, 0 fixings, 0 bound changes
+(round 3, exhaustive) 373909 del vars, 1532 del conss, 0 add conss, 17 chg bounds, 84 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 20160 clqs
+(round 4, exhaustive) 373909 del vars, 1532 del conss, 0 add conss, 17 chg bounds, 84 chg sides, 0 chg coeffs, 20585 upgd conss, 0 impls, 20160 clqs
+   (51.8s) probing: 51/13824 (0.4%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (51.8s) probing aborted: 50/50 successive totally useless probings
+presolving (5 rounds: 5 fast, 3 medium, 3 exhaustive):
+ 373909 deleted vars, 1532 deleted constraints, 0 added constraints, 17 tightened bounds, 0 added holes, 84 changed sides, 0 changed coefficients
+ 0 implications, 20160 cliques
+presolved problem has 13824 variables (13824 bin, 0 int, 0 impl, 0 cont) and 20585 constraints
+    509 constraints of type <knapsack>
+  20076 constraints of type <setppc>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 44.91
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  300s|     1 |     0 | 23519 |     - |  2128M |   0 |  13k|  20k|  20k|   0 |  0 |   0 |   0 |-1.384100e+04 |-2.570000e+02 |5285.60%| unknown
+(node 1) LP solver hit time limit in LP 1 -- using pseudo solution instead
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 300.10
+Solving Nodes      : 1
+Primal Bound       : -2.57000000000000e+02 (1 solutions)
+Dual Bound         : -1.38410000000000e+04
+Gap                : 5285.60 %

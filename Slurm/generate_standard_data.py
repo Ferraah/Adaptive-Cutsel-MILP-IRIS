@@ -507,7 +507,7 @@ def pre_solve_instances(instances, instance_paths, sol_paths, rand_seeds, transf
             slurm_job_ids.append(ji)
 
     run_clean_up_slurm_job_and_wait(outfile_dir, temp_dir, slurm_job_ids)
-
+    
     # Get all instances that did not pre-solve for all random seeds
     invalid_instances = []
     for instance in instances:
@@ -531,6 +531,7 @@ def pre_solve_instances(instances, instance_paths, sol_paths, rand_seeds, transf
             invalid_instances.append(instance)
 
     logging.warning('{} many instances {} failed pre-solve'.format(len(invalid_instances), invalid_instances))
+    logging.warning('DEBUG: {} many instances {} succesfully pre-solve'.format(len(instances), instances))
 
     # Remove all files associated with these invalid instances. They might exist as only some seeds might fail.
     for instance in invalid_instances:
@@ -651,6 +652,7 @@ if __name__ == "__main__":
                                          args.temp_dir, parameters.USE_PROVIDED_SOLUTIONS)
     remove_temp_files(args.temp_dir)
 
+    
     if not parameters.USE_PROVIDED_SOLUTIONS:
         # We then filter those instances which cannot produce primal solutions
         print('Finding primal solutions to pre-solved instances', flush=True)

@@ -1,0 +1,35 @@
+original problem has 10757 variables (10757 bin, 0 int, 0 impl, 0 cont) and 124 constraints
+1/1 feasible solution given by solution candidate storage, new primal bound 3.401600e+05
+
+presolving:
+(round 1, fast)       2 del vars, 2 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 122 clqs
+   (0.1s) running MILP presolver
+   (0.2s) MILP presolver found nothing
+(round 2, exhaustive) 2 del vars, 2 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 122 upgd conss, 0 impls, 122 clqs
+(round 3, medium)     118 del vars, 2 del conss, 0 add conss, 0 chg bounds, 116 chg sides, 116 chg coeffs, 122 upgd conss, 0 impls, 108 clqs
+(round 4, fast)       118 del vars, 16 del conss, 0 add conss, 0 chg bounds, 116 chg sides, 116 chg coeffs, 122 upgd conss, 0 impls, 108 clqs
+(round 5, exhaustive) 118 del vars, 43 del conss, 0 add conss, 0 chg bounds, 116 chg sides, 116 chg coeffs, 122 upgd conss, 0 impls, 108 clqs
+   (0.4s) running MILP presolver
+   (0.5s) MILP presolver found nothing
+   (0.6s) probing: 51/10639 (0.5%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.6s) probing aborted: 50/50 successive totally useless probings
+presolving (6 rounds: 6 fast, 4 medium, 3 exhaustive):
+ 118 deleted vars, 43 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 116 changed sides, 116 changed coefficients
+ 0 implications, 108 cliques
+presolved problem has 10639 variables (10639 bin, 0 int, 0 impl, 0 cont) and 81 constraints
+     81 constraints of type <setppc>
+transformed objective value is always integral (scale: 2)
+Presolving Time: 0.53
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  1.0s|     1 |     0 |  1293 |     - |    75M |   0 |  10k|  81 |  81 |   0 |  0 |   0 |   0 | 3.388642e+05 | 3.401600e+05 |   0.38%| unknown
+  1.0s|     1 |     2 |  1293 |     - |    75M |   0 |  10k|  81 |  81 |   0 |  1 |   0 |   0 | 3.388642e+05 | 3.401600e+05 |   0.38%| unknown
+
+SCIP Status        : solving was interrupted [node limit reached]
+Solving Time (sec) : 0.99
+Solving Nodes      : 1
+Primal Bound       : +3.40160000000000e+05 (1 solutions)
+Dual Bound         : +3.38864250000000e+05
+Gap                : 0.38 %
+wrote problem to file /mnt/lscratch/users/dferrario/Adaptive-Cutsel-MILP/TransformedInstances/air03__trans__seed__1.mps

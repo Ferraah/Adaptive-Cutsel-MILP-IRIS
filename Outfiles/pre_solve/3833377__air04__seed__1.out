@@ -1,0 +1,43 @@
+original problem has 8904 variables (8904 bin, 0 int, 0 impl, 0 cont) and 823 constraints
+1/1 feasible solution given by solution candidate storage, new primal bound 5.613700e+04
+
+presolving:
+(round 1, fast)       31 del vars, 3 del conss, 0 add conss, 11 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 777 clqs
+(round 2, fast)       49 del vars, 4 del conss, 0 add conss, 11 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 777 clqs
+   (0.1s) running MILP presolver
+   (0.1s) MILP presolver (3 rounds): 0 aggregations, 4 fixings, 0 bound changes
+(round 3, exhaustive) 53 del vars, 46 del conss, 0 add conss, 11 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 777 clqs
+(round 4, exhaustive) 53 del vars, 46 del conss, 0 add conss, 11 chg bounds, 0 chg sides, 0 chg coeffs, 777 upgd conss, 0 impls, 777 clqs
+(round 5, medium)     58 del vars, 46 del conss, 0 add conss, 11 chg bounds, 5 chg sides, 5 chg coeffs, 777 upgd conss, 0 impls, 777 clqs
+(round 6, exhaustive) 985 del vars, 161 del conss, 0 add conss, 11 chg bounds, 5 chg sides, 5 chg coeffs, 777 upgd conss, 0 impls, 645 clqs
+(round 7, fast)       1015 del vars, 180 del conss, 0 add conss, 11 chg bounds, 5 chg sides, 5 chg coeffs, 777 upgd conss, 0 impls, 642 clqs
+(round 8, fast)       1043 del vars, 181 del conss, 0 add conss, 11 chg bounds, 5 chg sides, 5 chg coeffs, 777 upgd conss, 0 impls, 642 clqs
+   (0.2s) running MILP presolver
+   (0.2s) MILP presolver (2 rounds): 1 aggregations, 0 fixings, 0 bound changes
+(round 9, medium)     1063 del vars, 182 del conss, 1 add conss, 11 chg bounds, 24 chg sides, 24 chg coeffs, 777 upgd conss, 0 impls, 643 clqs
+(round 10, fast)       1063 del vars, 183 del conss, 1 add conss, 11 chg bounds, 24 chg sides, 24 chg coeffs, 777 upgd conss, 0 impls, 643 clqs
+(round 11, exhaustive) 1279 del vars, 206 del conss, 1 add conss, 11 chg bounds, 24 chg sides, 24 chg coeffs, 777 upgd conss, 0 impls, 621 clqs
+(round 12, exhaustive) 1292 del vars, 211 del conss, 1 add conss, 11 chg bounds, 24 chg sides, 24 chg coeffs, 777 upgd conss, 0 impls, 616 clqs
+(round 13, medium)     1293 del vars, 211 del conss, 1 add conss, 11 chg bounds, 25 chg sides, 25 chg coeffs, 777 upgd conss, 0 impls, 616 clqs
+   (0.5s) probing: 52/7657 (0.7%) - 4 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.5s) probing aborted: 50/50 successive totally useless probings
+presolving (14 rounds: 14 fast, 9 medium, 6 exhaustive):
+ 1297 deleted vars, 211 deleted constraints, 1 added constraints, 11 tightened bounds, 0 added holes, 25 changed sides, 25 changed coefficients
+ 0 implications, 616 cliques
+presolved problem has 7653 variables (7653 bin, 0 int, 0 impl, 0 cont) and 613 constraints
+    613 constraints of type <setppc>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.49
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  3.2s|     1 |     0 | 11957 |     - |   116M |   0 |7653 | 613 | 613 |   0 |  0 |   0 |   0 | 5.553544e+04 | 5.613700e+04 |   1.08%| unknown
+  3.2s|     1 |     2 | 11957 |     - |   116M |   0 |7653 | 613 | 613 |   0 |  1 |   0 |   0 | 5.553544e+04 | 5.613700e+04 |   1.08%| unknown
+
+SCIP Status        : solving was interrupted [node limit reached]
+Solving Time (sec) : 3.17
+Solving Nodes      : 1
+Primal Bound       : +5.61370000000000e+04 (1 solutions)
+Dual Bound         : +5.55354363882243e+04
+Gap                : 1.08 %
+wrote problem to file /mnt/lscratch/users/dferrario/Adaptive-Cutsel-MILP/TransformedInstances/air04__trans__seed__1.mps

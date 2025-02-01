@@ -1,0 +1,33 @@
+original problem has 2728 variables (1364 bin, 0 int, 0 impl, 1364 cont) and 1442 constraints
+1/1 feasible solution given by solution candidate storage, new primal bound 1.168000e+03
+
+presolving:
+   (0.0s) running MILP presolver
+   (0.0s) MILP presolver (2 rounds): 36 aggregations, 0 fixings, 0 bound changes
+(round 1, medium)     36 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 39 clqs
+(round 2, fast)       36 del vars, 36 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 36 impls, 39 clqs
+(round 3, exhaustive) 36 del vars, 36 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 1331 upgd conss, 36 impls, 39 clqs
+   (0.2s) probing: 1000/1328 (75.3%) - 0 fixings, 1 aggregations, 52761 implications, 0 bound changes
+   (0.3s) probing cycle finished: starting next cycle
+presolving (4 rounds: 4 fast, 3 medium, 2 exhaustive):
+ 38 deleted vars, 36 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 71774 implications, 6158 cliques
+presolved problem has 2690 variables (1328 bin, 0 int, 0 impl, 1362 cont) and 1406 constraints
+   1328 constraints of type <varbound>
+      3 constraints of type <setppc>
+     75 constraints of type <linear>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.31
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  0.4s|     1 |     0 |  1528 |     - |    30M |   0 |2690 |1406 |1404 |   0 |  0 |   0 |   0 | 1.005682e+03 | 1.168000e+03 |  16.14%| unknown
+  0.4s|     1 |     2 |  1528 |     - |    30M |   0 |2690 |1406 |1404 |   0 |  1 |   0 |   0 | 1.005682e+03 | 1.168000e+03 |  16.14%| unknown
+
+SCIP Status        : solving was interrupted [node limit reached]
+Solving Time (sec) : 0.38
+Solving Nodes      : 1
+Primal Bound       : +1.16800000000000e+03 (1 solutions)
+Dual Bound         : +1.00568163503482e+03
+Gap                : 16.14 %
+wrote problem to file /mnt/lscratch/users/dferrario/Adaptive-Cutsel-MILP/TransformedInstances/aflow40b__trans__seed__1.mps

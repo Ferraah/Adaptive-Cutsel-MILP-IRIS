@@ -1,0 +1,15 @@
+dir_cut_off: 0.0
+dual_bound: 1091.9646464657417
+efficacy: 0.8333333333333333
+gap: 0.0696316989568799
+int_support: 0.08333333333333333
+num_cuts: 499
+num_lp_iterations: 17682
+num_nodes: 1
+obj_parallelism: 0.08333333333333333
+primal_bound: 1168.0
+primal_dual_difference: 76.03535353425832
+primal_dual_integral: 161.25
+solution_fractionality: 0.10466867469879518
+solve_time: 12.856983
+status: nodelimit

@@ -469,7 +469,12 @@ def run_python_slurm_job(python_file, job_name, outfile, time_limit, arg_list, d
              outfile,
              '{}'.format(python_file)]
 
-    cmd = cmd_1 + cmd_2 + cmd_3
+    # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    #cmd_4 = ['--qos', "besteffort"]
+    # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    cmd = cmd_1 + cmd_2 + cmd_3 
+
 
     # Add all arguments of the python file afterwards
     for arg in arg_list:
@@ -479,6 +484,7 @@ def run_python_slurm_job(python_file, job_name, outfile, time_limit, arg_list, d
     p = subprocess.Popen(cmd, env=my_env, stdout=subprocess.PIPE)
     p.wait()
 
+    print('Submitted job {} with command {}'.format(job_name, cmd))
     # Now access the stdout of the subprocess for the job ID
     job_line = ''
     for line in p.stdout:

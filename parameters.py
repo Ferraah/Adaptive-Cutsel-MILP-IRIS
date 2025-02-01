@@ -4,7 +4,7 @@ Each parameter here affects different bits of the experiments. The individual co
 
 # If you want to use the MIPLIB solution instead of one found after a 10 minute solve, set this to True
 # In the paper this was set to False for all data sets
-USE_PROVIDED_SOLUTIONS = False
+USE_PROVIDED_SOLUTIONS = True
 
 # The time-limit that filters instances that take longer than this time to presolve. Time in seconds.
 # Note that this includes the root node LP solve if USE_PROVIDED_SOLUTIONS is True. In the paper this was set to 300
@@ -54,7 +54,7 @@ NUM_TORCH_SEEDS = 1000
 MIN_PRIMAL_DUAL_DIFFERENCE = 0.5
 
 # Make sure to set this before you begin any runs. This is the SLURM queue that'll be used
-SLURM_QUEUE = 'INSERT SLURM QUEUE HERE'
+SLURM_QUEUE = 'batch'
 
 
 

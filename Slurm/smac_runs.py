@@ -1,8 +1,9 @@
 #! /usr/bin/env python
-from ConfigSpace import ConfigurationSpace
+from ConfigSpace import ConfigurationSpace, Float
+
 from ConfigSpace.hyperparameters import UniformFloatHyperparameter
-from smac.facade.smac_bb_facade import SMAC4BB
-from smac.scenario.scenario import Scenario
+from smac import BlackBoxFacade as BBFacade
+from smac import Scenario
 import numpy as np
 import os
 import argparse
@@ -72,20 +73,23 @@ def train_smac_model(train_instance_dir, test_instance_dir, solution_dir,
 
     # Define your hyperparameters
     configspace = ConfigurationSpace()
-    configspace.add_hyperparameter(UniformFloatHyperparameter('dcd', 0, 1, default_value=0.0,
+    
+    configspace.add(Float('dcd', bounds=(0, 1), default=0.0,
                                                               meta=global_run_information))
-    configspace.add_hyperparameter(UniformFloatHyperparameter('eff', 0, 1, default_value=1.0))
-    configspace.add_hyperparameter(UniformFloatHyperparameter('isp', 0, 1, default_value=0.1))
-    configspace.add_hyperparameter(UniformFloatHyperparameter('obp', 0, 1, default_value=0.1))
+    configspace.add(Float('eff', bounds=(0, 1), default=1.0))
+    configspace.add(Float('isp', bounds=(0, 1), default=0.1))
+    configspace.add(Float('obp', bounds=(0, 1), default=0.1))
 
     # Provide meta data for the optimization
-    scenario = Scenario({
-        'run_obj': 'quality',  # Optimize quality (alternatively runtime)
-        'runcount-limit': num_epochs,  # Max number of function evaluations (the more the better)
-        'cs': configspace,
-    })
+    scenario = Scenario(
+        configspace=configspace,
+        objectives="quality",  # Optimize quality (alternatively runtime)
+        n_trials=num_epochs,  # Max number of function evaluations (the more the better)
+        seed=-1  # Random seed
+    )
 
-    bb = SMAC4BB(scenario=scenario, tae_runner=main_smac_call, rng=random_state)
+    #bb = SMAC4BB(scenario=scenario, tae_runner=main_smac_call, rng=random_state)
+    bb = BBFacade(scenario, lambda config, seed: main_smac_call(config, seed, global_run_information))
     best_found_config = bb.optimize()
 
     print(best_found_config, flush=True)
@@ -110,7 +114,7 @@ def train_smac_model(train_instance_dir, test_instance_dir, solution_dir,
         yaml.dump(data, s)
 
 
-def main_smac_call(config):
+def main_smac_call(config, seed:int, global_run_information):
     """
     The function that SMAC calls for a single evaluation
     Args:
@@ -120,14 +124,14 @@ def main_smac_call(config):
     Returns:
         The score of the run (lower is better). The relative improved primal-dual-difference over default settings
     """
-
+    print(config)
     # Extract information from the meta description
-    instance_dir = config.configuration_space['dcd'].meta['instance_dir']
-    solution_dir = config.configuration_space['dcd'].meta['solution_dir']
-    temp_dir = config.configuration_space['dcd'].meta['temp_dir']
-    outfile_dir = config.configuration_space['dcd'].meta['outfile_dir']
-    rand_seeds = config.configuration_space['dcd'].meta['rand_seeds']
-    standard_solve_data = config.configuration_space['dcd'].meta['standard_solve_data']
+    instance_dir = global_run_information['instance_dir']
+    solution_dir = global_run_information['solution_dir']
+    temp_dir = global_run_information['temp_dir']
+    outfile_dir = global_run_information['outfile_dir']
+    rand_seeds = global_run_information['rand_seeds']
+    standard_solve_data = global_run_information['standard_solve_data']
 
     # Create the numpy array from the cut selector parameter values
     cut_selector_params = np.array([config['dcd'], config['eff'], config['isp'], config['obp']])

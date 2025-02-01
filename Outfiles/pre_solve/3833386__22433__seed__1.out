@@ -1,0 +1,32 @@
+original problem has 429 variables (231 bin, 0 int, 0 impl, 198 cont) and 198 constraints
+1/1 feasible solution given by solution candidate storage, new primal bound 2.147700e+04
+
+presolving:
+(round 1, fast)       197 del vars, 0 del conss, 1 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       197 del vars, 0 del conss, 1 add conss, 0 chg bounds, 198 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (0.0s) running MILP presolver
+   (0.0s) MILP presolver (1 rounds): 0 aggregations, 0 fixings, 0 bound changes
+(round 3, exhaustive) 197 del vars, 1 del conss, 1 add conss, 0 chg bounds, 199 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 4, exhaustive) 197 del vars, 1 del conss, 1 add conss, 0 chg bounds, 199 chg sides, 0 chg coeffs, 197 upgd conss, 0 impls, 0 clqs
+   (0.0s) probing cycle finished: starting next cycle
+presolving (5 rounds: 5 fast, 3 medium, 3 exhaustive):
+ 197 deleted vars, 1 deleted constraints, 1 added constraints, 0 tightened bounds, 0 added holes, 199 changed sides, 0 changed coefficients
+ 231 implications, 0 cliques
+presolved problem has 232 variables (231 bin, 0 int, 0 impl, 1 cont) and 198 constraints
+     67 constraints of type <knapsack>
+      1 constraints of type <linear>
+    130 constraints of type <logicor>
+Presolving Time: 0.03
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  0.0s|     1 |     0 |   557 |     - |  4905k |   0 | 232 | 198 | 198 |   0 |  0 |   0 |   0 | 2.124053e+04 | 2.147700e+04 |   1.11%| unknown
+  0.0s|     1 |     2 |   557 |     - |  4905k |   0 | 232 | 198 | 198 |   0 |  1 |   0 |   0 | 2.124053e+04 | 2.147700e+04 |   1.11%| unknown
+
+SCIP Status        : solving was interrupted [node limit reached]
+Solving Time (sec) : 0.04
+Solving Nodes      : 1
+Primal Bound       : +2.14770000000000e+04 (1 solutions)
+Dual Bound         : +2.12405261707989e+04
+Gap                : 1.11 %
+wrote problem to file /mnt/lscratch/users/dferrario/Adaptive-Cutsel-MILP/TransformedInstances/22433__trans__seed__1.mps
