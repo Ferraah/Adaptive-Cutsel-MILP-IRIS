@@ -2,7 +2,7 @@
 # Fork modifications and notes
 Some scripts have been added to simplify the deployment of the tasks, namely:
 ```
-init_env.sh
+init_venv.sh
 1_runGenerateStandardData.sh
 2_runFeaturesGeneration.sh
 3_runParameterSweep.sh
