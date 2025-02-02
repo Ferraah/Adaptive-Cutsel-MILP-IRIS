@@ -1,21 +1,24 @@
 # Adaptive Cut Selection in Mixed-Integer Linear Programming
+# Fork modifications and notes
+Some scripts have been added to simplify the deployment of the tasks, namely:
+```
+init_env.sh
+1_runGenerateStandardData.sh
+2_runFeaturesGeneration.sh
+3_runParameterSweep.sh
+4_runSmac.sh
+5_runTrainGCNN.sh
+6_runEvaluateGCNN.sh
+```
+which have to be preferably run in order for reproducing the experiment. No need to run `set_venv.sh`.
 
-If this software was used for academic purposes, please cite our paper with the below information:
+`init_venv.sh` has been modified to use `micromamba` and more recent packages instead.
 
-`
-@article{turner2023adaptive,
-     author = {Mark Turner and Thorsten Koch and Felipe Serrano and Michael Winkler},
-     title = {Adaptive {Cut} {Selection} in {Mixed-Integer} {Linear} {Programming}},
-     journal = {Open Journal of Mathematical Optimization},
-     eid = {5},
-     publisher = {Universit\'e de Montpellier},
-     volume = {4},
-     year = {2023},
-     doi = {10.5802/ojmo.25},
-     language = {en},
-     url = {https://ojmo.centre-mersenne.org/articles/10.5802/ojmo.25/}
-}`
+`Slurm/smac_runs.py` has been adapted to be run on the environment with `smac=2.0.0`.
 
+Some task require a very long time to be completed, so manage the number of input instances and epochs of ML routines according to your needs. 
+
+# Original instructions
 ## Install Guide
 
 Requirements: Python 3.8 / Ubuntu (18.04 / 20.04) / Mathematica 20 (Probably installs on other Ubuntu versions, and if
