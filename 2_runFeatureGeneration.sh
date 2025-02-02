@@ -7,9 +7,7 @@
 
 cd /scratch/users/dferrario/Adaptive-Cutsel-MILP 
 
-module load lang/Python/3.8.6-GCCcore-10.2.0
-
-micromamba activate venv
+micromamba activate adaptive_cutsel
 
 export PYTHONPATH=$(pwd):$PYTHONPATH
 

@@ -1,10 +1,14 @@
-numpy==1.18.5
-matplotlib==3.3.3
--f https://download.pytorch.org/whl/torch_stable.html
-torch==1.7.0+cpu
-tensorboard==2.9.1
-seaborn==0.11.1
-pyyaml==5.4.1
-Cython==0.29.27
-smac==1.4.0
-scikit-learn==1.1.2
+numpy 1.23.3
+matplotlib 3.3.3
+pytorch
+pytorch-cpu
+torchvision
+pytorch_geometric
+tensorboard 
+seaborn 0.11.1
+pyyaml 5.4.1
+Cython 0.29.27
+smac 2.0.0
+scikit-learn 
+pyscipopt 
+scip 9.1.0

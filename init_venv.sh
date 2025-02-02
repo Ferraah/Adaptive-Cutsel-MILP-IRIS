@@ -1,13 +1,5 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
-#virtualenv -p python3.8 venv
-micromamba create --name venv
-# /usr/bin/python3 venv
-#source venv/bin/activate
-micromamba activate venv
+eval "$(micromamba shell hook --shell=bash)"
 
-# install everything
-pip install -r requirements.txt
-pip install -r requirements2.txt
-
-deactivate
+micromamba create -n adaptive_cutsel -f requirements.txt -c conda-forge python=3.9 -y

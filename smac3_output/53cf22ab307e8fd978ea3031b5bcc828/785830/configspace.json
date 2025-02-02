@@ -1,0 +1,52 @@
+{
+  "name": null,
+  "hyperparameters": [
+    {
+      "type": "uniform_float",
+      "name": "dcd",
+      "lower": 0.0,
+      "upper": 1.0,
+      "default_value": 0.0,
+      "log": false,
+      "meta": {
+        "instance_dir": "TransformedInstances/Train/",
+        "solution_dir": "TransformedSolutions/",
+        "temp_dir": "TempFiles",
+        "outfile_dir": "Outfiles/smac_runs",
+        "rand_seeds": [],
+        "standard_solve_data": {}
+      }
+    },
+    {
+      "type": "uniform_float",
+      "name": "eff",
+      "lower": 0.0,
+      "upper": 1.0,
+      "default_value": 1.0,
+      "log": false,
+      "meta": null
+    },
+    {
+      "type": "uniform_float",
+      "name": "isp",
+      "lower": 0.0,
+      "upper": 1.0,
+      "default_value": 0.1,
+      "log": false,
+      "meta": null
+    },
+    {
+      "type": "uniform_float",
+      "name": "obp",
+      "lower": 0.0,
+      "upper": 1.0,
+      "default_value": 0.1,
+      "log": false,
+      "meta": null
+    }
+  ],
+  "conditions": [],
+  "forbiddens": [],
+  "python_module_version": "1.2.0",
+  "format_version": 0.4
+}
