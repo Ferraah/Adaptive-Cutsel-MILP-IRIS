@@ -12,9 +12,9 @@ init_venv.sh
 ```
 which is reccomended to be run in order for reproducing the experiment. No need to run `set_venv.sh`.
 
-`init_venv.sh` has been modified to use `micromamba` and more recent packages instead.
+`init_venv.sh` has been modified to use `micromamba` and more recent packages instead, compatible with `python=3.9`.
 
-`Slurm/smac_runs.py` has been adapted to be run on the environment with `smac=2.0.0` and `python=3.9`.
+`Slurm/smac_runs.py` has been adapted to be run on the environment with `smac=2.0.0`.
 
 Some task require a very long time to be completed, so manage the number of input instances and epochs of ML routines according to your needs. 
 
